@@ -5,18 +5,21 @@ Official PyTorch implementation of **Token–Channel Compounded Cross-Attention*
 ---
 
 ## 📦 Repository Structure
-'''
+
+
+```
 tacoformer/
-├─ main.py # Entry: load data → split & save test set → k-fold hyperparameter search
-│ # → train best model on training split → evaluate on held-out test set
-├─ config.py # Paths and hyperparameter grid configuration
-├─ data.py # Data loading, concatenation, splitting, and DataLoader helpers
-├─ model.py # ViT + TACO cross-attention model 
-├─ train.py # Training and evaluation loops 
-├─ search.py # k-fold cross-validation hyperparameter search
-├─ utils.py # Utilities 
+├─ main.py          # Entry: load data → split & save test set → k-fold hyperparameter search
+│                  # → train best model on training split → evaluate on held-out test set
+├─ config.py        # Paths and hyperparameter grid configuration
+├─ data.py          # Data loading, concatenation, splitting, and DataLoader helpers
+├─ model.py         # ViT + TACO cross-attention model (original functionality, English comments)
+├─ train.py         # Training and evaluation loops (keeps your loss/accuracy logic)
+├─ search.py        # k-fold cross-validation hyperparameter search
+├─ utils.py         # Utilities (seeding, device print helpers, etc.)
 └─ requirements.txt # Python dependencies
-'''
+```
+
 ---
 
 ## 🧪 Data & Preprocessing
