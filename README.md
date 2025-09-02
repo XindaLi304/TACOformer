@@ -32,7 +32,7 @@ where:
 - `128`  = timestamps per second
 
 - Preprocessing details follow the paper:  
-**TACO** — *Token–Channel Compounded Cross-Attention for Multimodal Emotion Recognition*  
+**TACOformer** — *Token–Channel Compounded Cross-Attention for Multimodal Emotion Recognition*  
 PDF: https://arxiv.org/pdf/2306.13592
 
 > **Note:** This repo expects separate `.npy` files for EEG, EOG, EMG, and labels, then concatenates modalities along the channel dimension. Paths are configured in `config.py`.
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 # Run the full pipeline
 python main.py
 
-If you use this code, please cite the TACO paper:
+If you use this code, please cite the paper:
 
-Token–Channel Compounded Cross-Attention for Multimodal Emotion Recognition, 2023.
+TACOformer: Token–Channel Compounded Cross-Attention for Multimodal Emotion Recognition, 2023.
 arXiv:2306.13592
