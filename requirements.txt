@@ -1,0 +1,7 @@
+torch
+torchvision
+einops
+numpy
+scikit-learn
+matplotlib
+pytorch-warmup
