@@ -58,6 +58,7 @@ pip install -r requirements.txt
 
 # Run the full pipeline
 python main.py
+```
 
 If you use this code, please cite the paper:
 
