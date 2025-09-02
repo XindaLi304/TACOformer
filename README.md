@@ -67,3 +67,13 @@ TACOformer: Token–Channel Compounded Cross-Attention for Multimodal Emotion Re
 
 arXiv:2306.13592
 🤗
+
+
+---
+## 🗓️TODO:
+cross-subject experiment with domain-adaptation methods.
+
+
+application in other multimodal sequential data.
+
+
