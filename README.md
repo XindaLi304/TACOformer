@@ -63,4 +63,7 @@ python main.py
 If you use this code, please cite the paper:
 
 TACOformer: Token–Channel Compounded Cross-Attention for Multimodal Emotion Recognition, 2023.
+
+
 arXiv:2306.13592
+🤗
