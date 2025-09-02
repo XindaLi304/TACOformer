@@ -43,7 +43,7 @@ PDF: https://arxiv.org/pdf/2306.13592
 
 ```bash
 # Clone and enter the project
-git clone <your-repo-url>.git
+git clone https://github.com/XindaLi304/TACOformer.git
 cd tacoformer
 
 # (Optional) Create & activate a virtual environment
