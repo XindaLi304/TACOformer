@@ -1,25 +1,63 @@
 # TACOformer
-Official Pytorch implementation of token-channel compounded cross attention for multimodal emotion recognition
 
+Official PyTorch implementation of **Token–Channel Compounded Cross-Attention** (TACO) for multimodal emotion recognition.
 
-data_preprocess: 
-  the processed shape in "data_exg.np" file should be [1280,60,n_channels,128].
-  The details of the preprocessing are shown in https://arxiv.org/pdf/2306.13592
-  
+---
+
+## 📦 Repository Structure
+
 tacoformer/
-├─ main.py                  # 入口：数据加载 -> 划分并保存测试集 -> 超参搜索 -> 训练最佳模型 -> 测试集评估
-├─ config.py                # 路径与超参网格配置
-├─ data.py                  # 数据加载、拼接、划分、DataLoader 构造
-├─ model.py                 # 你的 ViT + TACO Cross-Attention 模型（功能不改、注释英文）
-├─ train.py                 # 训练与评估循环（保持你的损失/精度计算逻辑）
-├─ search.py                # k-fold 超参搜索
-├─ utils.py                 # 工具函数（设随机种、度量、保存等）
-└─ requirements.txt         # 依赖
+├─ main.py # Entry: load data → split & save test set → k-fold hyperparameter search
+│ # → train best model on training split → evaluate on held-out test set
+├─ config.py # Paths and hyperparameter grid configuration
+├─ data.py # Data loading, concatenation, splitting, and DataLoader helpers
+├─ model.py # ViT + TACO cross-attention model (original functionality, English comments)
+├─ train.py # Training and evaluation loops (keeps your loss/accuracy logic)
+├─ search.py # k-fold cross-validation hyperparameter search
+├─ utils.py # Utilities (seeding, device print helpers, etc.)
+└─ requirements.txt # Python dependencies
 
+---
 
+## 🧪 Data & Preprocessing
 
-cd eeg_vit_project
-python -m venv .venv && source .venv/bin/activate   # 可选
+- The processed array (merged EEG/EOG/EMG) should have the shape:
+[1280, 60, n_channels, 128]
+where:
+- `1280` = number of trials,
+- `60`   = timesteps per trial,
+- `n_channels` ： EEG：81 ，EOG：4 ， EMG：4 
+- `128`  = segment length per timestep.
+
+- Preprocessing details follow the paper:  
+**TACO** — *Token–Channel Compounded Cross-Attention for Multimodal Emotion Recognition*  
+PDF: https://arxiv.org/pdf/2306.13592
+
+> **Note:** This repo expects separate `.npy` files for EEG, EOG, EMG, and labels, then concatenates modalities along the channel dimension. Paths are configured in `config.py`.
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Clone and enter the project
+git clone <your-repo-url>.git
+cd tacoformer
+
+# (Optional) Create & activate a virtual environment
+python -m venv .venv
+# macOS/Linux:
+source .venv/bin/activate
+# Windows (PowerShell):
+# .\.venv\Scripts\Activate.ps1
+
+# Install dependencies
 pip install -r requirements.txt
 
+# Run the full pipeline
 python main.py
+
+If you use this code, please cite the TACO paper:
+
+Token–Channel Compounded Cross-Attention for Multimodal Emotion Recognition, 2023.
+arXiv:2306.13592
