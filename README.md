@@ -15,3 +15,11 @@ tacoformer/
 ├─ search.py                # k-fold 超参搜索
 ├─ utils.py                 # 工具函数（设随机种、度量、保存等）
 └─ requirements.txt         # 依赖
+
+
+
+cd eeg_vit_project
+python -m venv .venv && source .venv/bin/activate   # 可选
+pip install -r requirements.txt
+
+python main.py
