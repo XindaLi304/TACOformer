@@ -71,6 +71,9 @@ arXiv:2306.13592
 
 ---
 ## 🗓️TODO:
+better embedding method for physiological signals.
+
+
 cross-subject experiment with domain-adaptation methods.
 
 
