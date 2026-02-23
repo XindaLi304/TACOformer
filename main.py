@@ -40,7 +40,7 @@ def main():
     )
 
     # 5) Train final model on the full training split with best hyperparameters
-    #    (We mimic your original loop without an extra validation split)
+
     device_style = device_print_like_original()
     print(device_style)
 
