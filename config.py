@@ -33,7 +33,7 @@ class Config:
     DEVICE_LIST_STYLE = True  # keep your original device print style ['gpu']/['cpu']
 
     # ====== Hyperparameter search space (grid) ======
-    # Keep them modest first; you can expand later.
+
     GRID = {
         "learning_rate": [1e-3, 5e-4],
         "weight_decay": [0.0, 1e-4],
